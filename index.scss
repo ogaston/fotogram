@@ -1,0 +1,264 @@
+@import "node_modules/materialize-css/sass/materialize.scss";
+
+$secondary-color: #125688;
+$primary-color: #fafafa;
+$heart-color: #f44336;
+$border-box-color: #edeeee;
+
+
+body {
+  background: $primary-color;
+  color: $secondary-color;
+  font-family: Montserrat;
+}
+
+#main-container {
+  margin: 0px auto;
+  transition: 1s;
+  opacity: 0;
+}
+
+.landing{
+  margin: 30px auto; 
+}
+
+.iphone {
+  max-width: 100%;
+}
+
+
+.login-box,
+.signup-box {
+  background-color: white;
+  border: 1px solid $border-box-color;
+  border-radius: 3px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.Fotogram {
+  font-family: 'Oleo Script';
+  font-size: 42px;
+  color: $secondary-color !important;
+}
+
+.signup-form {
+  width: 65%;
+  margin: 0 auto;
+
+  h2 {
+    color: #a5a7aa;
+    font-size: 1.2em;
+  }
+
+  .btn.btn-fb {
+    background-color: #4090db;
+    font-size: .9em;
+  }
+
+  .font-small{
+    font-size: 12px !important;
+  }  
+
+  .btn.btn-fb:hover {
+    background-color: #2d6599;
+  }
+
+  .btn.btn-signup {
+    background-color: $secondary-color;
+  }
+}
+
+.header{
+  color: $secondary-color;
+  box-shadow: none;
+  border-bottom: 1px solid $border-box-color;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  background: $primary-color;
+  z-index: 1;
+}
+
+.timeline {
+  padding: 30px 0px;
+  margin-bottom: 30px;
+  transition: 1s;
+
+}
+
+$avatar-size: 48px;
+
+.avatar {
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius:50%;
+  float:left;
+  margin-right: 12px;
+}
+
+.card {
+  .username {
+    color:$secondary-color;
+  }
+  
+  small.time {
+    line-height:  $avatar-size;
+  }
+  
+  p {
+    padding: 20px 0;
+  }
+  
+  .likes {
+    line-height: 30px;
+    margin-left: 12px;
+  }
+  
+  i {
+    font-size: 30px;
+  }
+  
+  .fa-heart-o{
+    color: $secondary-color;
+  }
+  
+  .fa-heart{
+    color: $heart-color;
+    display: none;
+  }
+  
+}
+
+.liked{
+  .fa-heart{
+    display:block;
+    }
+
+.fa-heart-o{
+    display: none;
+  }
+}
+
+.no-bottom-margin {
+  margin-bottom: 0px !important;
+}
+
+
+.form-upload{
+  margin-top: 50px;
+
+  .img-preview{    
+    width: 100%;
+    margin: 20px 0px;
+    background: #f3f3f3;
+    padding: 10px;
+    z-index: 0;
+  }
+
+  span, button {
+    color: white;
+  }
+
+  .fileUpload{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 430px;
+  }
+
+  input {
+    position:absolute;
+    top:0px;
+    right: 0px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+
+  }
+
+}
+
+.fixed-add{
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  transition: 1s;
+  transform: scale(0);
+}
+
+.site-footer{
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+  background: $primary-color;
+}
+
+.loader-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  transition: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid $secondary-color; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 200px auto;
+}
+
+.loaded {
+  opacity: 1 !important;
+}
+
+.show-img{
+  animation: show-img 0.6s linear;
+  animation-fill-mode: forwards;
+}
+
+.hide-img{
+  animation: hide-img 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
+.loaded-spinner{
+  animation: spin-out 1s linear;
+  animation-fill-mode: forwards;
+}
+
+.erase {
+  display: none !important;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-out {
+  70% {
+    transform: scale(10);
+    opacity: 0;
+  }
+
+  100%{
+    z-index: -10;
+    position: absolute;
+    overflow: hidden;
+  }
+}
+
+@keyframes show-img{
+  from { width: 0px;  }
+  to { width: 150px;  }
+}
+
+@keyframes hide-img{
+  to { width: 0px;  }
+}
