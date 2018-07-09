@@ -236,6 +236,43 @@ $avatar-size: 48px;
   display: none !important;
 }
 
+.margin-top-and-down{
+  margin: 70px auto;
+}
+
+.profile {
+
+  text-align: center;
+
+  .profile-avatar{
+    width: 50%;
+    border-radius: 50%;
+    height: 25%;
+  }
+
+  .username{
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .follow{
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .followers{
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .img-container{
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }

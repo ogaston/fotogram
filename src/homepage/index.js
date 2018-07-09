@@ -6,8 +6,17 @@ var axios = require('axios')
 
 page('/', header , asyncLoad, (ctx,next)=>{
 	$('#main-container').empty().append(template(ctx.pictures)).addClass('loaded');
-
 })
+
+
+function deleteLoader(){
+	var ele = document.getElementById('loader');
+	ele.addEventListener("webkitAnimationEnd", del);
+
+	function del(){
+		setTimeout($('#loader').remove(),500) 
+	}
+}
 
 //REQUEST WITH CALLBACKS
 function loadPictures(ctx,next) {
@@ -51,6 +60,7 @@ async function asyncLoad(ctx,next) {
 				document.getElementById('loader').classList.toggle('loaded-spinner')
 				return res.json()
 			});
+			deleteLoader()
 			next();
 		} catch (err){
 			return console.log(err)

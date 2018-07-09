@@ -7083,6 +7083,29 @@ body {
 .erase {
   display: none !important; }
 
+.margin-top-and-down {
+  margin: 70px auto; }
+
+.profile {
+  text-align: center; }
+  .profile .profile-avatar {
+    width: 50%;
+    border-radius: 50%;
+    height: 25%; }
+  .profile .username {
+    font-size: 30px;
+    font-weight: bold; }
+  .profile .follow {
+    font-size: 17px;
+    font-weight: 600; }
+  .profile .followers {
+    font-size: 17px;
+    font-weight: 600; }
+  .profile .img-container {
+    width: 100%;
+    display: block;
+    text-align: center; }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg); }

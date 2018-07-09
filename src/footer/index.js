@@ -13,7 +13,7 @@ var el = yo`<footer class="site-footer">
           </ul>
         </div>
         <div class="col s12 l3 push-l6 center-align">
-          © 2016 Fotogram
+          © 2018 made with ♥ by Omar Gaston 
         </div>
       </div>
     </div>

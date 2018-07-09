@@ -32,9 +32,14 @@ module.exports = function (pictures) {
 	      ${pictures.map(pic=>picture(pic))}
 	    </div>
 	  </div>
-	  <a class="btn-floating btn-large waves-effect waves-light cyan fixed-add" id="fixed-add"><i class="fa fa-camera"></i></a>
+	  <button class="btn-floating btn-large waves-effect waves-light cyan fixed-add" id="fixed-add" onclick="${uploadFloat}"><i class="fa fa-camera"></i></button>
 	</div>`;
 
+
+	function uploadFloat() {
+		window.scrollTo(0,0);
+		document.getElementById('file').click()
+	}
 
 	function cancel(argument) {
 		toggleButton();
@@ -88,18 +93,19 @@ module.exports = function (pictures) {
 		}
 	  }
 	
+	function canActivateButtonFixed(){
+		if (window.scrollY > 100) {
+			document.getElementById('fixed-add').style.transform = 'scale(1.1)';
+		} else {
+			document.getElementById('fixed-add').style.transform = 'scale(0)';
+		}
+	}
+	
+	
+	
+	window.addEventListener('scroll', canActivateButtonFixed)
 
 	return layout(el);
 } 
 
-function canActivateButtonFixed(){
-	if (window.scrollY > 100) {
-		document.getElementById('fixed-add').style.transform = 'scale(1.1)';
-	} else {
-		document.getElementById('fixed-add').style.transform = 'scale(0)';
-	}
-}
 
-
-
-window.addEventListener('scroll', canActivateButtonFixed)

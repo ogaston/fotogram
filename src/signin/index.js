@@ -1,10 +1,11 @@
 var page = require('page');
 var template = require('./template');
-var main = document.getElementById('main-container');
+
+import { loadedPage } from '../service'
 
 page('/signin', (ctx,next)=>{
 	
 	$('title').html('Fotogram - Signin');  
-    $('#main-container').empty().append(template);
+    loadedPage($('#main-container').empty().append(template));
 })
 

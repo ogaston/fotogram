@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 	res.render('index')
 })
 
-app.get(['/','/signup', '/signin'], (req, res) => {
+app.get(['/','/signup', '/signin', '/profile'], (req, res) => {
   res.render('index')
 })
 
