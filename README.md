@@ -1,4 +1,4 @@
-> **Fotogram ** was made for educational purposes. 
+> **Fotogram** was made for educational purposes. 
 
 ## Fotogram UI
 
@@ -36,7 +36,7 @@ If you want test the app for you own, or maybe make some contribution, follow th
   npm start
 ```
 
-- Browse to *localhost:3000.
+- Browse to *localhost:3000*.
 
 ## Contributing
 
