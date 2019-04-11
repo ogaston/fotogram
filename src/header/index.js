@@ -23,7 +23,7 @@ var el = yo`<nav class="header">
     </div>
   </nav>`;
 
-  module.exports = function header(cxt,next) {
+  module.exports = function header(cxt, next) {
     $('#header-container').empty().append(el);
     next();
   } 
